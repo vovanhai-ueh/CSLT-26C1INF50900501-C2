@@ -47,7 +47,7 @@ namespace CSLT_26C1INF50900501_C2.session03
         {
 
         }
-        public static void Main(string[] args)
+        public static void Main1(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
 
