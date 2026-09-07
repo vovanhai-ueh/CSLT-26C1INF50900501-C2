@@ -70,7 +70,7 @@ namespace CSLT_26C1INF50900501_C2.session05
             }
         }
 
-        public static void Main(string[] args) //ui
+        public static void Main2(string[] args) //ui
         {
             Console.OutputEncoding = Encoding.UTF8;
             Console.Write("Nhập hệ số a: "); int a = int.Parse(Console.ReadLine());
