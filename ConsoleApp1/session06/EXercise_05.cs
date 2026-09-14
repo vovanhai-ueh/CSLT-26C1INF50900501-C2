@@ -7,7 +7,7 @@ namespace CSLT_26C1INF50900501_C2.session06
     public class EXercises
     {
 
-        public static void Main(string[] args)
+        public static void Main2222(string[] args)
         {
             //so_hoan_thien();
             //so_nguyen_to();
