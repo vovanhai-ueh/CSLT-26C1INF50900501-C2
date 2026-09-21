@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CSLT_26C1INF50900501_C2.session07
+namespace CSLT_26C1INF50900501_C2.session06
 {
     public class Ex04
     {

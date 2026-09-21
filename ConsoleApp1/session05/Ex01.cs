@@ -4,37 +4,83 @@ using System.Text;
 
 namespace CSLT_26C1INF50900501_C2.session05
 {
-    internal class Ex01
+    public class Ex01
     {
-        /// <summary>
-        /// Write a C# Sharp program that takes two numbers as input and 
-        /// performs an operation (+,-,*,x,/) on them and displays the result 
-        /// of that operation.
-        /// </summary>
-        static void Bai_1()
+        public static void Main2(string [] args)
         {
-            Console.Write("Nhap so a ="); int a = int.Parse(Console.ReadLine());
-            Console.Write("Nhap so b ="); int b = int.Parse(Console.ReadLine());
-            Console.WriteLine($"{a} + {b} = {a + b}");
-            Console.WriteLine($"{a} - {b} = {a - b}");
-            Console.WriteLine($"{a} * {b} = {a * b}");
-            Console.WriteLine($"{a} / {b} = {a / b}");
-            Console.WriteLine($"{a} % {b} = {a % b}");
-        }
-        /// <summary>
-        /// Write a C# Sharp program to display certain values of the 
-        /// function x = y2 + 2y + 1 (using integer numbers for y, 
-        /// ranging from -5 to +5).
-        /// </summary>
-        static void Bai_2()
-        {
-
+            Console.OutputEncoding = Encoding.UTF8;
+            guessing_game_engine();
         }
 
-        public static void Main1(string[] args)
+
+        /// <summary>
+        /// 1. Máy tính nghĩ ngẫu nhiên 1 số. [1-100]
+        /// 2. Hỏi người dùng đoán số
+        /// 3. Nếu người dùng đoán đúng thì thông báo
+        ///     nếu người đoán nhỏ/lớn hơn thì thông báo nhỏ/lớn hơn
+        ///     
+        /// chơi cho đến khi người dùng chọn Không chơi nữa
+        /// Thông kê số lần thắng, thua
+        /// </summary>
+        static void guessing_game_engine()
         {
-            Bai_1();
-            Bai_2();
+            bool continue_play = true;
+            int dem_thang = 0, tong_so_van_choi =0;
+            int level = 1;
+            int so_lan_doan = 0;
+            do
+            {
+                tong_so_van_choi++;
+
+                //cho người dùng chọn mức độ
+                Console.Write("Bạn chơi múc độ nào <1-dễ; 2-trung bình; 3-khó>?");
+                level = int.Parse(Console.ReadLine());
+                if (level == 1)
+                    so_lan_doan = 9;
+                else if (level == 2)
+                    so_lan_doan = 6;
+                else
+                    so_lan_doan = 4;
+
+                //1.Máy tính nghĩ ngẫu nhiên 1 số.[1-100]
+                Random rnd = new Random();//thư viện tạo số ngẫu nhiên
+                int com_num = rnd.Next(100) + 1;//[1-10]
+
+                // 2. Hỏi người dùng đoán số. 
+                for (int i = 0; i < so_lan_doan; i++)
+                {
+                    Console.Write("Bạn đoán số mấy? ");
+                    int user_num = int.Parse(Console.ReadLine());
+
+                    //3. so sánh đáp án
+                    if (user_num == com_num)
+                    {
+                        dem_thang++;
+                        Console.WriteLine("Bravo!, bạn là thiên tài.");
+                        Console.WriteLine($"Bạn đã đoán đúng sau {i+1} lần chơi");
+                        break;
+                    }
+                    else if (user_num < com_num)
+                    {
+                        Console.WriteLine("Bạn đoán số nhỏ hơn máy nghĩ");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Bạn đoán số lớn hơn máy nghĩ");
+                    }
+                }
+                Console.WriteLine($"Số máy nghĩ ra là {com_num}");
+                //xong 1 lần chơi
+
+                //hỏi người chơi chơi nữa không
+                Console.Write("Bạn dám chơi nữa không <c/k>? ");
+                string tl = Console.ReadLine();
+                if (tl.ToLower() == "k")
+                    //break;//tắt chương trình nếu người chơi chọn k
+                    continue_play = false;
+
+            } while (continue_play);
+
         }
     }
 }

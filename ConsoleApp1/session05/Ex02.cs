@@ -1,39 +1,59 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Text;
 
 namespace CSLT_26C1INF50900501_C2.session05
 {
-    public class Ex02
+    internal class EX02
     {
-        static void gameEngine()
+        public static void Main4(string[] args)
         {
-            Console.OutputEncoding = Encoding.UTF8;
-            //1. máy tính nghĩ ra 1 số ngẫu nhiên từ 1-10
-            Random rnd =new Random();
-            int comNum = rnd.Next(0,10) + 1;
-            //Console.WriteLine(comNum);
-
-            //2. Người dùng đoán (nhập dữ liệu)
-            Console.Write("Bạn đoán số mấy <1..10>?: ");
-            int userNam = int.Parse(Console.ReadLine());
-            //3. Báo kết quả
-            if (userNam == comNum)//đoán đúng
+            /*for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine("Bravo, You are genius!");
-            }
-            else //đoán sai
-            {
-                Console.WriteLine($"Bạn sai rồi. Máy nghĩ ra số {comNum}");
-            }
+                if (i == 5) continue;//bỏ qua lần lặp hiện tại
+                Console.WriteLine(i);
+            }*/
 
-            Console.WriteLine("Bye");
+            //string s = "Đại học Kinh tế TPHCM";
+
+            /*for (int i = 0; i < s.Length; i++)
+            {
+                Console.WriteLine(s[i]);
+            }*/
+
+            /*foreach(var c in s)
+            {
+                Console.WriteLine(c);
+            }*/
+
+            //printStartTriangle();
+            printMultiplicationTable();
         }
 
-        public static void Main1(string[] args)
+        public static void printStartTriangle()
         {
-            Console.WriteLine("welcome to guessing number game\n");
-            gameEngine();
+            int n = 10;
+            for (int i = 1; i <= n; i++)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write("* ");
+                }
+                Console.WriteLine();
+            }
+        }
+
+        static void printMultiplicationTable()
+        {
+            for (int i = 2; i <= 15; i++)
+            {
+                for(int j = 1; j <= 10; j++)
+                {
+                    Console.WriteLine($" {i} * {j} = {i*j}");
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
