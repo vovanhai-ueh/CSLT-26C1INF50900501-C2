@@ -49,7 +49,7 @@ namespace CSLT_26C1INF50900501_C2.session06.exercises
         }
 
 
-        public static void Main(string[] args)
+        public static void Main222(string[] args)
         {
             /*Console.Write("Nhap so can kiem tra: ");
             int so =int.Parse(Console.ReadLine());

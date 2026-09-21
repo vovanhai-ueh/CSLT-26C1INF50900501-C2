@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CSLT_26C1INF50900501_C2.session06
 {
-    internal class Sinhvien
+    internal class Sinhvienxx
     {
         public void phatbieu(string topic)
         {

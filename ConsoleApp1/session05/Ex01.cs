@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CSLT_26C1INF50900501_C2.session05
 {
-    public class Ex01
+    public class Ex01sss
     {
         public static void Main2(string [] args)
         {
