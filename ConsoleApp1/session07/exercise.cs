@@ -11,7 +11,7 @@ namespace CSLT_26C1INF50900501_C2.session07
     internal class exercise
     {
 
-        public static void Main(string[] args)
+        public static void Main33(string[] args)
         {
             int n = 50;
             int[] mang = new int[n];
