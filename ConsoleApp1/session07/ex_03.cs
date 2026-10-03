@@ -85,7 +85,7 @@ namespace CSLT_26C1INF50900501_C2.session07
             return max;
         }
 
-        public static void Main(string[] args)
+        public static void Mai11n(string[] args)
         {
             int n = 5, m = 6;
 
